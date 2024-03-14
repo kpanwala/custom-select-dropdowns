@@ -1,0 +1,38 @@
+<div class="container mt-5">
+  <form [formGroup]="form">
+    <h3>Single select dropdown</h3>
+    <custom-single-dropdown [formControl]="$any(form).get('dropdown1')" formControlName="dropdown1" [dropdownValues]="foods"
+      [selectedValue]="selectedValue1" [show]="showLabel" [valueLabel]="valueLabel" [disabled]="isDisabled">
+    </custom-single-dropdown>
+    <br>
+    <custom-single-dropdown [formControl]="$any(form).get('dropdown2')" formControlName="dropdown2" [dropdownValues]="cars"
+      [selectedValue]="selectedValue2" [show]="showLabel" [valueLabel]="valueLabel" [disabled]="isDisabled">
+    </custom-single-dropdown>
+    <br>
+    <br>
+
+    <h3>Multiple select dropdown</h3>
+    <custom-multiple-dropdown [formControl]="$any(form).get('dropdown3')" formControlName="dropdown3" [dropdownValues]="cars"
+      [selectedValue]="selectedValue3" [show]="showLabel" [valueLabel]="valueLabel" [disabled]="isDisabled">
+    </custom-multiple-dropdown>
+    <br>
+    <br>
+    <input type="text" id="fname" name="fname" formControlName="fname">
+    <input type="text" id="lname" name="lname" formControlName="lname">
+    <br>
+  </form>
+  <br>
+  <br>
+  <div>
+    <p>Custom Single Dropdown 1 Value : {{form.value.dropdown1.value}}</p>
+    <p>Custom Single Dropdown 2 Value : {{form.value.dropdown2.value}}</p>
+    <p>Custom Multiple Dropdown 3 Value : 
+      <!-- <span *ngFor="let item of form.value.dropdown3">{{item.show}}</span> -->
+      {{selectedDropdown3Str}}
+    </p>
+    <br>
+    <p>fname : {{form.value.fname}}</p>
+    <p>lname : {{form.value.lname}}</p>
+    <p><button (click)="toggleDisableStatus()">Toggle Disability</button></p>
+  </div>
+</div>

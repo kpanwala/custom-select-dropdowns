@@ -1,0 +1,8 @@
+<mat-form-field>
+    <mat-label>{{title}}</mat-label>
+    <mat-select [(value)]="value" (selectionChange)="setValue($event.value)" [disabled]="disabled">
+      <mat-option *ngFor="let item of dropdownValues" [value]="item">
+        {{item[show]}}
+      </mat-option>
+    </mat-select>
+</mat-form-field>
