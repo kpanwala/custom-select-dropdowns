@@ -1,4 +1,4 @@
-body{
+/* body{
     overflow-x: hidden;
     }
     
@@ -192,8 +192,6 @@ body{
         content: "\25BA";  
         color: #4875f0; 
         display: inline-block; 
-        width: 1.2em;
-        /* margin-left: -0.9em; */
         font-weight: 10;
         font-size:1.5rem;
     }
@@ -266,7 +264,7 @@ body{
         margin:0px;
         width: 100vw;
     }
-     /* ANIMATED X */
+
     .navbar-toggler.x {
         border: none;
       }
@@ -331,7 +329,6 @@ body{
         height: 100%;
     }
     
-    /* for desktop screens */
     @media (min-width: 800px) {  
     
         .tab {
@@ -377,7 +374,7 @@ body{
         }
     }
     
-    /* for mobile screens */
+
     @media (max-width:800px){
         .skills{
             margin-left: -15vw;
@@ -471,4 +468,4 @@ body{
     .bg-dark{
         background: #343a40!important
     }
-    
+    */
